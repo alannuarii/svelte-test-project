@@ -1,13 +1,11 @@
-import mqtt from 'mqtt';
-import mqttData from '../lib/js/store';
+// import mqtt from 'mqtt';
 
-const client = mqtt.connect('mqtt://public.mqtthq.com');
-client.on('connect', () => {
-	console.log('Terhubung ke broker MQTT');
-	client.subscribe('led/alan');
-});
+// const client = mqtt.connect('ws://test.mosquitto.org:8080');
+// client.on('connect', () => {
+// 	console.log('Terhubung ke broker MQTT');
+// 	client.subscribe('led/alan');
+// });
 
-client.on('message', (topic, message) => {
-	// console.log(`Pesan dari topik ${topic}: ${message.toString()}`);
-	mqttData.set(message.toString()); // Perbarui nilai store
-});
+// client.on('message', (topic, message) => {
+// 	console.log(`Pesan dari topik ${topic}: ${message.toString()}`);
+// });
